@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Chat Room</title>
+</head>
+<body>
+    <div class="chatroom-container">
+        <header class="chatroom-header">
+            <h1>Room Chat</h1>
+        </header>
+        <main class="chatroom-main">
+            <div class="form-container">
+                <form id="create-room-form">
+                    <input type="text" id="room-name" placeholder="Enter Room Name" required>
+                    <button type="submit" class="btn">Create Room</button>
+                </form>
+                <form id="join-room-form">
+                    <label for="join-room-select">Join Existing Room:</label>
+                    <select id="join-room-select" required>
+                        <option value="">Select a Room</option>
+                    </select>
+                    <button type="submit" class="btn">Join Room</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+            integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/public/js/chatroom.js"></script>
+</body>
+</html>
